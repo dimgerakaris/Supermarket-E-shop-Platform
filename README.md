@@ -24,3 +24,7 @@ As a Generalist Engineer, I pay great attention to how the user interacts with t
 
 ## 🔗 Live Demo
 You can view the live project here: https://mysm.infinityfreeapp.com/?i=1
+
+## 📄 Resume
+You can view or download my professional resume here: 
+[Download CV (PDF)](../CV_Gerakaris_Dimitris.pdf)
