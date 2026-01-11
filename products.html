@@ -1,0 +1,228 @@
+<?php include 'header.php'; ?>
+
+<html>
+<head>
+    	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Τα Προϊόντα μας</title>
+		<LINK REL="stylesheet" type="text/css" href="css/myCSS.css"/>
+		<LINK REL="stylesheet" type="text/css" href="css/productsCSS.css"/>
+		<!-- έτοιμες βιβλιοθήκες-->
+		<LINK REL="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
+									awesome/6.6.0/css/all.min.css">
+		<!-- _______ΤΟ ΠΑΡΑΚΑΤΩ SCRIPT ΜΑΛΛΟΝ ΘΑ ΣΒΗΣΤΕΙ_________-->							
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.js"> 
+		</script>
+</head>
+<body>
+	<section id="Products">
+		<nav>
+					<div class="logotypo">
+						<img src="PHOTO/logotypo.png" alt="My Logo Image!">
+					</div>
+
+					<ul>
+						<li><a href="index.html" class="index-link">Home</a></li>
+						<li><a href="products.html" class="products-link">Products</a></li>
+						<li><a href="order.html">Order</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="about.html">About</a></li>
+				</ul>
+				<div class="icon">
+					<a href="cart.php"><i class="fas fa-shopping-cart"></i> <span id="cart-count"><?php echo $cart_count ?? 0; ?></span></a>
+					<!-- <i class="fa-solid fa-researchgate"></i> -->
+				</div>
+				
+				<!---------user-box----------*/-->
+				<div class="user-box">
+					<p>username: <span> <?php echo $_SESSION['user_name'];?></span></p>
+					<p>Email: <span> <?php echo $_SESSION['user_email'];?></span></p>
+					<a href="login.php" class="btn">login</a>
+					<a href="register.php" class="btn">register</a>
+					<form method="post">
+						<button type="submit" name="logout" class="logout-btn">log out</button>
+					</form>
+				</div>
+				
+		</nav>
+	</section>
+	
+    <h1>Επιλέξτε κατηγορία προϊόντων:</h1>
+    <ul>
+        <li class="category">
+            <img src="PHOTO/category/pantopoleio.png" alt="Είδη Παντοπωλείου" class="category-img">
+            <a href="#pantopwleio">Είδη Παντοπωλείου</a>
+            <ul class="subcategories">
+                <li><a href="zymarika.html">Ζυμαρικά</a></li>
+                <li><a href="aleyria.html">Αλεύρι</a></li>
+				<li><a href="zaxari.html">Ζάχαρη</a></li>
+                <li><a href="saltses.html">Έτοιμες Σάλτσες</a></li>
+				<li><a href="mpaxarika.html">Αλάτι και Μπαχαρικά</a></li>
+                <li><a href="ladi.html">Λάδια και Ξύδι</a></li>
+				<li><a href="ryzia.html">Ρύζια</a></li>
+                <li><a href="ospria.html">Όσπρια</a></li>
+				<li><a href="ntomatika.html">Ντοματικά</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/drinks.jpg" alt="Νερά, Αναψυκτικά, Χυμοί" class="category-img">
+            <a href="#drinks">Νερά, Αναψυκτικά, Χυμοί</a>
+            <ul class="subcategories">
+                <li><a href="nera.html">Νερά</a></li>
+                <li><a href="anapsyktika.html">Αναψυκτικά</a></li>
+                <li><a href="xymoi.html">Χυμοί</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/kaba.jpg" alt="Κάβα" class="category-img">
+            <a href="#kaba">Κάβα</a>
+            <ul class="subcategories">
+                <li><a href="krasi.html">Κρασιά</a></li>
+                <li><a href="mpira.html">Μπύρες</a></li>
+				<li><a href="pota.html">Ποτά</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/galata.jpg" alt="Γάλατα, Κρέμες Γάλατος" class="category-img">
+            <a href="#galata">Γάλατα, Κρέμες Γάλατος</a>
+            <ul class="subcategories">
+                <li><a href="gala.html">Γάλα</a></li>
+                <li><a href="krema.html">Κρέμα Γάλακτος</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/giaoyrtia.jpg" alt="Γιαούρτια" class="category-img">
+            <a href="#giaoyrtia">Γιαούρτια</a>
+            <ul class="subcategories">
+                <li><a href="giaoyrtia.html">Γιαούρτια</a></li>
+                <li><a href="gBaby.html">Βρεφικά Γιαούρτια</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/tyrokomika.jpg" alt="Τυροκομικά" class="category-img">
+            <a href="#tyrokomika">Τυροκομικά</a>
+            <ul class="subcategories">
+                <li><a href="leykoTyri.html">Λευκά Τυριά</a></li>
+                <li><a href="kitrinoTyri.html">Κίτρινα Τυριά</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/ayga.jpg" alt="Αυγά, Βούτυρο" class="category-img">
+            <a href="#ayga">Αυγά, Βούτυρο, Νωπές Ζύμες</a>
+            <ul class="subcategories">
+                <li><a href="ayga.html">Αυγά</a></li>
+                <li><a href="boytyro.html">Βούτυρο</a></li>
+				<li><a href="nwpesZymes.html">Νωπές Ζύμες</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/kreas.jpg" alt="Φρέσκα Κρέατα" class="category-img">
+            <a href="#kreas">Φρέσκα Κρέατα</a>
+            <ul class="subcategories">
+                <li><a href="kotopoulo.html">Κοτόπουλο</a></li>
+                <li><a href="mosxari.html">Μοσχάρι</a></li>
+				<li><a href="arni.html">Αρνί και Κατσίκι</a></li>
+				<li><a href="xoirino.html">Χοιρινό</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/allantika.jpg" alt="Αλλαντικά" class="category-img">
+            <a href="#allantika">Αλλαντικά</a>
+            <ul class="subcategories">
+				<li><a href="galopKOT.html">Αλλαντικά Γαλοπούλας και Κοτόπουλο</a></li>
+                <li><a href="zampon.html">Ζαμπόν</a></li>
+				<li><a href="mpeikon.html">Μπέικον</a></li>
+				<li><a href="salamia.html">Σαλάμια</a></li>
+                <li><a href="loykanika.html">Λουκάνικα</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/thalassina.jpg" alt="Φρέσκο Ψάρι, Θαλασσινά" class="category-img">
+            <a href="#thalassina">Φρέσκο Ψάρι, Θαλασσινά</a>
+            <ul class="subcategories">
+                <li><a href="psari.html">Ψάρια</a></li>
+                <li><a href="malakia.html">Μαλάκια Θαλασσινά</a></li>
+				<li><a href="ostrakoeidh.html">Οστρακοειδή Θαλασσινά</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/sokolates.jpg" alt="Μπισκότα, Ζαχαρώδη, Σοκολάτες" class="category-img">
+            <a href="#sokolates">Μπισκότα, Ζαχαρώδη, Σοκολάτες</a>
+            <ul class="subcategories">
+                <li><a href="mpiskota.html">Μπισκότα</a></li>
+                <li><a href="sokolata.html">Σοκολάτες</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/snak.jpg" alt="Σνακ" class="category-img">
+            <a href="#snak">Σνακ, Ξηροί Καρποί</a>
+			<ul class="subcategories">
+                <li><a href="snaks.html">Σνάκς</a></li>
+                <li><a href="kshroiKarpoi.html">Ξηροί Καρποί</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/prwino.jpg" alt="Είδη πρωινού, Ροφήματα" class="category-img">
+            <a href="#prwino">Είδη πρωινού, Ροφήματα</a>
+			<ul class="subcategories">
+                <li><a href="dhmhtriaka.html">Δημητριακά και Μπάρες</a></li>
+                <li><a href="rofhmata.html">Καφέδες και Ροφήματα</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/babyfood.jpg" alt="Βρεφικά Τρόφιμα" class="category-img">
+            <a href="#babyfood">Βρεφικά Τρόφιμα</a>
+			<ul class="subcategories">
+                <li><a href="babyGala.html">Βρεφικά και Παιδικά Γάλατα</a></li>
+                <li><a href="babyFoods.html">Βρεφικές και Παιδικές Τροφές</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/xartika.jpg" alt="Χαρτικά, Πάνες" class="category-img">
+            <a href="#xartika">Χαρτικά, Πάνες, Σερβιέτες</a>
+			<ul class="subcategories">
+                <li><a href="xartikaa.html">Χαρτικά</a></li>
+                <li><a href="panesEnhlikwn.html">Σερβιέτες και Πάνες Ενηλίκων</a></li>
+				<li><a href="panesBrefikes.html">Βρεφικές πάνες και Μωρομάντηλα</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/proswpika.jpg" alt="Είδη προσωπικής Υγιεινής" class="category-img">
+            <a href="#proswpika">Είδη προσωπικής Υγιεινής, Καλλυντικά</a>
+			<ul class="subcategories">
+                <li><a href="malliwn.html">Φροντίδα Μαλλιών</a></li>
+                <li><a href="swma.html">Φροντίδα Σώματος</a></li>
+				<li><a href="ksyrisma.html">Είδη Ξυρίσματος</a></li>
+				<li><a href="proswpo.html">Φροντίδα Προσώπου</a></li>
+                <li><a href="stoma.html">Στοματική Υγιεινή</a></li>
+            </ul>
+        </li>
+
+        <li class="category">
+            <img src="PHOTO/category/katharistika.jpg" alt="Απορρυπαντικά" class="category-img">
+            <a href="#katharistika">Απορρυπαντικά, Είδη καθαρισμού</a>
+			<ul class="subcategories">
+                <li><a href="royxwn.html">Απορρυπαντικά Ρούχων</a></li>
+                <li><a href="piata.html">Απορρυπαντικά Πιάτων</a></li>
+				<li><a href="katharistika.html">Καθαριστικά Γενικής Χρήσης</a></li>
+				<li><a href="synergaKatharismoy.html">Σύνεργα καθαρισμού</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

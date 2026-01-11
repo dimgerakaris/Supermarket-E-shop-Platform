@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    background: #f4f4f4;
+    padding-top:80px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+section {
+    width: 100%;
+    /* height: 80vh; */
+}
+section nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: lightgray;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+section nav .logotypo img {
+    width: 60px;
+    cursor: pointer;
+    margin: 5px;
+}
+section nav ul {
+    display: flex;
+    gap: 20px;
+}
+section nav ul li {
+    list-style: none;
+}
+section nav ul li a {
+    color: #FF5722;
+    font-weight: 800;
+    font-size: 18px;
+    transition: 0.1s;
+}
+section nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #FF7043;
+    display: block;
+    transition: 0.2s;
+}
+section nav ul li a:hover::after {
+    width: 100%;
+}
+section nav ul li a:hover {
+    color: #FF7043;
+}
+section nav .icon i {
+    font-size: 16px;
+    color: #FF5722;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+section nav .icon i:hover {
+    color: #E53935;
+}
+.user-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    color: #333;
+    width: auto;
+    gap: 15px;
+}
+
+.user-box p {
+    margin: 0;
+    color: #555;
+    white-space: nowrap; /* Διατήρηση σε μία γραμμή */
+}
+
+.user-box span {
+    font-weight: bold;
+    color: #FF5722;
+}
+
+.user-box a.btn, 
+.user-box .logout-btn {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    background: #FF5722;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-box a.btn:hover, 
+.user-box .logout-btn:hover {
+    background: #E53935;
+}
+
+section .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    /* top: 80px; */
+    top: 50px;
+}
+h1 {
+    text-align: center;
+    font-size: 2rem; 
+    color: #FF6600; 
+    margin-bottom: 20px;
+}
+
+section .main .mtext h1 {
+    position: relative;
+    font-size: 40px;
+    bottom: 70px;
+    /* left: 30px; */
+}
+.mtext h1 span {
+    color: red;
+    font-size: 40px;
+}
+.mtext h2 {
+    background: #FF7043;
+    padding: 8px 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 100px;
+    color: #fff;
+    /* left: 105px; */
+    cursor: pointer;
+    font-weight: normal;
+    border-radius: 30px 130px 30px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+.mtext h2:hover {
+    background: #FF5722;
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.mtext h2 span {
+    color: #FF5722;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+section .main .m_image img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom:100px;
+}
+.m_image img {
+    max-width: 100%; /* Η εικόνα δεν θα υπερβαίνει το πλάτος του container */
+    height: auto; /* Διατηρεί τις αναλογίες της εικόνας */
+    max-height: 400px; /* Μπορείς να ορίσεις ένα μέγιστο ύψος για να μικρύνει */
+    display: block; /* Για καλύτερη στοίχιση */
+    margin: 0 auto; /* Κέντρο αν χρειάζεται */
+}
+.m_image {
+    max-height: 400px; /* Περιορίζει το ύψος του container */
+    overflow: hidden; /* Αν υπάρχει μεγάλη εικόνα, κρύβει το υπόλοιπο */
+}
+
+.order-btn {
+    position: fixed;
+    left: 10%;
+    top: 90%;
+    transform: translateY(-50%);
+    background-color: #FF5722;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.order-btn:hover {
+    background-color: #E53935;
+}
+
+/*header css*/
+/* Header Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: lightgray;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+nav .logotypo img {
+    width: 60px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #FF5722;
+    font-weight: 800;
+    font-size: 18px;
+    transition: 0.1s;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #FF7043;
+    display: block;
+    transition: 0.2s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #FF7043;
+}
+
+nav .icon i {
+    font-size: 16px;
+    color: #FF5722;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+nav .icon i:hover {
+    color: #E53935;
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    color: #333;
+    width: auto;
+    gap: 15px;
+}
+
+.user-box p {
+    margin: 0;
+    color: #555;
+    white-space: nowrap; /* Διατήρηση σε μία γραμμή */
+}
+
+.user-box span {
+    font-weight: bold;
+    color: #FF5722;
+}
+
+.user-box a.btn, 
+.user-box .logout-btn {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    background: #FF5722;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-box a.btn:hover, 
+.user-box .logout-btn:hover {
+    background: #E53935;
+}
+/* CSS για sorting */
+.sort-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+/* Τίτλος ταξινόμησης */
+.sort-title {
+    font-family: 'Arial', sans-serif; 
+    font-size: 0.8rem; 
+    color: #333; 
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px; 
+    margin-right: 20px;
+}
+/*Τίτλος αναζήτησης */
+.search-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px; 
+    color: #333; 
+}
+.sort-dropdown {
+    font-family: 'Arial', sans-serif; 
+    font-size: 0.8rem; 
+    color: #333; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #fff; /
+}
+.sort-dropdown:hover {
+    border-color: #FF6600; /* Border κατά το hover */
+}
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 300px;
+    padding: 8px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-button {
+    background-color: #FF6600;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button i {
+    font-size: 1rem;
+}
+
+.search-button:hover {
+    background-color: #E64A19;
+}
+
+/* CSS for About page */
+.about-section {
+    margin: 60px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-title {
+        text-align: center;
+        color: #ff6600;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .about-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: #ccc;
+    }
+
+    .about-text {
+        flex: 1;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .about-text a {
+        color: #ff6600;
+        text-decoration: none;
+    }
+
+    .about-text a:hover {
+        text-decoration: underline;
+    }
+
+    .profile-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .profile-icon {
+        color: #333;
+        text-decoration: none;
+        font-size: 24px;
+    }
+    
+    .profile-icon:hover {
+        color: #ff6600;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-radius:5px;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #ff6600;
+        color:white;
+    }
+    
+    .profile-dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .messages-wrapper {
+        position: relative;
+        display: inline-block;
+        margin: 0 15px; /* Adjust margin as needed */
+    }
+    
+    .messages-icon {
+        color: #333;
+        text-decoration: none;
+        font-size: 24px;
+        position: relative;
+    }
+    
+    .messages-icon:hover {
+        color: #ff6600;
+    }
+    
+    #messages-count {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: #ff6600;
+        color: white;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 12px;
+    }
+
+.cart-dropdown {
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.cart-dropdown .cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item-quantity {
+    font-weight: bold!important;
+}
+
+.cart-dropdown .cart-item-details h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.cart-dropdown .cart-item-details p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #555;
+    font-weight:bold;
+}
+
+.cart-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-items {
+    padding: 10px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cart-item-name {
+    flex: 1;
+    font-size: 14px;
+}
+
+.cart-item-quantity,
+.cart-item-price {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.cart-total {
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    position: sticky; 
+    bottom: 0; 
+    z-index: 10; 
+}
+
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.cart-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/*Responsive font sizes for header and footer */
+@media (max-width: 1366px) {
+    nav ul li a {
+        font-size: 14px;
+    }
+    
+    .dropdown-content {
+        font-size: 14px;
+    }
+
+    .total-count {
+        font-size: 14px;
+    }
+    .records-per-page {
+        font-size: 14px;
+    }
+
+    section .main .mtext h1 {
+        font-size: 16px;
+    }
+
+    .mtext h1 span {
+        font-size: 30px;
+    }
+
+    .footer-column h3 {
+        font-size: 16px;
+    }
+    
+    .footer-text {
+        font-size: 16px;
+    }
+    
+    .user-box{
+        font-size: 12px;
+    }
+
+    .orders-title {
+        font-size: 20px;
+    }
+
+    nav .icon i {
+        font-size: 12px;
+    }
+
+    #cart-count {
+        font-size: 14px;
+    }
+
+    
+
+}

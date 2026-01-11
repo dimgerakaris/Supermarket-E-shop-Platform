@@ -1,0 +1,396 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.orders-container {
+    width: 100%;
+    max-width: 1300px; /* Αύξησε το αν χρειάζεται */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: auto; /* ΑΛΛΑΓΗ από calc(100vh - 500px) σε auto */
+    display: block; /* ΑΛΛΑΓΗ από flex σε block */
+    overflow: visible; /* Να επιτρέπει την επέκταση του περιεχομένου */
+}
+
+.orders-title {
+    text-align: center;
+    color: #ff6600;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.orders-list {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.order-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.order-box.header {
+    background-color: #f9f9f9;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.order-box.header div {
+    color: #ff6600;
+    position: relative;
+    /* padding-right: 50px; */
+}
+
+.order-box:hover {
+    background-color: #f1f1f1;
+}
+
+.order-column {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    min-width: 180px;
+    white-space: nowrap;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+
+.order-column.spacer {
+    flex: 0.5;
+}
+
+.order-column a {
+    color: #ff6600;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.order-column a:hover {
+    color: #ff4500;
+}
+
+.order-column:last-child {
+    margin-right: 20px;
+}
+
+.sort-buttons {
+    margin-top: 5px;
+}
+
+.sort-link {
+    margin-left: 5px;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination-link {
+    color: #ff6600;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.pagination-link:hover {
+    color: #ff4500;
+}
+
+.total-count {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.records-per-page {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.records-per-page select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #ff6600;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip above the text */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ff6600 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close, .close-success {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus, .close-success:hover, .close-success:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.confirm-button, .cancel-button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.confirm-button:hover, .cancel-button:hover {
+    background-color: #ff4500;
+}
+#deleteModal h3, #deleteModal p, #successModal h3, #successModal p {
+    margin: 10px 0;
+}
+
+#deleteModal hr, #successModal hr {
+    margin: 20px 0;
+}
+
+.status.pending i.fas.fa-spinner.fa-spin {
+    color: #ff6600;
+}
+
+.status.completed i.fas.fa-check-circle {
+    color: #ff6600;
+}
+
+/*FILTERS CSS */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.filter-group input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.filter-group input:focus {
+    border-color: #ff6600;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(255, 102, 0, 0.5);
+}
+
+.search-button {
+    padding: 10px 15px;
+    border: none;
+    background: #ff6600;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom:-20px;
+}
+
+.search-button i {
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background: #e65c00;
+    box-shadow: 0px 3px 10px rgba(255, 102, 0, 0.5);
+}
+
+/* footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    z-index: 10;
+} */
+
+/* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+    .orders-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .order-column {
+        min-width: 150px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .orders-container {
+        padding: 5px;
+    }
+
+    .order-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-column {
+        width: 100%;
+        text-align: left;
+        padding: 5px 0;
+    }
+
+    .order-column:last-child {
+        margin-right: 0;
+    }
+
+    .order-box.header {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .order-box.header .order-column {
+        flex: 1 1 50%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-box.header .order-column {
+        flex: 1 1 100%;
+    }
+
+    .order-column {
+        min-width: 100px;
+    }
+
+    .order-box {
+        padding: 10px;
+    }
+
+    .order-column a {
+        margin-left: 0;
+    }
+}
+
+/* Στυλ μόνο για το orders.php */
+body.orders-page .orders-list {
+    display: flex; /* Επαναφορά σε flex */
+    flex-direction: column;
+    gap: 5px;
+}
+
+body.orders-page .order-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Βελτίωση πλάτους στηλών ώστε να μην κολλάνε */
+body.orders-page .order-column {
+    min-width: 150px; /* Κρατάμε τις στήλες πιο στενές για να μη σπάνε */
+    white-space: nowrap;
+    text-align: center;
+}

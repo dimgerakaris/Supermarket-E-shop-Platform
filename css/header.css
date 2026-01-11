@@ -1,0 +1,181 @@
+/* header.css */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: lightgray;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    height:80px;
+}
+
+nav .logotypo img {
+    width: 60px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #FF5722;
+    font-weight: 800;
+    font-size: 18px;
+    transition: 0.1s;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #FF7043;
+    display: block;
+    transition: 0.2s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #FF7043;
+}
+
+nav .icon i {
+    font-size: 16px;
+    color: #FF5722;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+nav .icon i:hover {
+    color: #E53935;
+}
+
+.user-box {
+    display: flex;
+    align-items: center; /* Ευθυγράμμιση στο κέντρο κάθετα */
+    justify-content: space-between; /* Ενδιάμεσος χώρος */
+    background: #FFFFFF;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    color: #333;
+    width: auto;
+    gap: 15px; /* Απόσταση μεταξύ των στοιχείων */
+}
+
+.user-box p {
+    margin: 0;
+    color: #555;
+    white-space: nowrap; /* Διατήρηση σε μία γραμμή */
+}
+
+.user-box span {
+    font-weight: bold;
+    color: #FF5722;
+}
+
+.user-box a.btn, 
+.user-box .logout-btn {
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    background: #FF5722;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0; /* Αφαίρεση εξωτερικού περιθωρίου */
+}
+
+.user-box a.btn:hover, 
+.user-box .logout-btn:hover {
+    background: #E53935;
+}
+
+/* Για τα κουμπιά να βρίσκονται στην ίδια γραμμή */
+.user-box form {
+    margin: 0;
+    display: flex; /* Flexbox για εσωτερικά στοιχεία */
+    align-items: center; /* Κεντράρισμα κάθετα */
+}
+
+
+/*cart sidebar css*/
+/* Sidebar Styling */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Αρχικά κρυμμένο */
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 1000;
+    transition: right 0.3s ease;
+}
+
+.cart-sidebar.open {
+    right: 0; /* Εμφανίζεται */
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.close-cart {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#cart-items {
+    padding: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+.checkout-btn {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #FF5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.checkout-btn:hover {
+    background-color: #E53935;
+}

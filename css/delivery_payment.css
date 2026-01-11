@@ -1,0 +1,166 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.content {
+    min-height: calc(100vh - 100px); /* Adjust 100px to the height of your footer */
+    padding-bottom: 50px; /* Adjust 50px to the height of your footer */
+}
+
+.footer {
+    height: 50px; /* Adjust to the height of your footer */
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.delivery-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-container h1, .delivery-container h2 {
+    text-align: center;
+    color: #FF5722;
+}
+
+.address-section, .payment-section {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.address-section p, .payment-section label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.payment-section .btn {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #FF5722;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.payment-section .btn:hover {
+    background-color: #E64A19;
+}
+.section-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #FF5722;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+input[type="radio"]:checked {
+    background-color: #FF5722;
+    border-color: #FF5722;
+}
+
+input[type="radio"]:hover {
+    box-shadow: 0 0 5px #FF5722;
+}
+.delivery-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delivery-options label {
+    font-size: 16px;
+    color: #333;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.delivery-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.payment-options label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+.payment-title {
+    margin-bottom: 15px; 
+}
+.pickup-title {
+    margin-bottom: 15px; 
+}
+.customer-title {
+    margin-bottom: 15px; 
+}
+
+#cardForm {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#cardForm h3 {
+    margin-bottom: 10px;
+    color: #FF5722;
+}
+
+#cardForm input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-details div {
+    width: 48%;
+}

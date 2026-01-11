@@ -1,0 +1,155 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.customers-container {
+    flex:1;
+    margin: 20px auto;
+    overflow: visible !important;
+    min-height: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.customers-title {
+    text-align: center;
+    color: #ff6600;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.customers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: visible !important;
+    min-height: auto;
+}
+
+.customer-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.customer-box.header {
+    background-color: #f9f9f9;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.customer-column {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.customer-box:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.customer-box:hover {
+    background-color: #f1f1f1;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.actions a {
+    color: #ff6600;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.actions a:hover {
+    color: #cc5200;
+}
+
+.total-customers {
+    text-align: center;
+    color: #ff6600;
+    font-size: 18px;
+    margin-top: 15px;
+
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.customer-column{
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    min-width: 200px;
+    white-space: normal;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.order-column:last-child{
+    margin-right: 20px;
+}
+.pagination{
+    text-align: center;
+    margin-top: 20px;
+}
+.pagination-link{
+    color: #ff6600;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.records-per-page {
+    flex: 1 1 auto;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+.records{
+    text-align: center;
+}

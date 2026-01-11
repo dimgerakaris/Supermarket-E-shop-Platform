@@ -1,0 +1,520 @@
+/* Στυλ για τις κατηγορίες */
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 στήλες */
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.category {
+    list-style: none;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.category-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.category a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Στυλ για τις υποκατηγορίες */
+.subcategories {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.subcategories li {
+    margin-top: 5px;
+}
+
+.subcategories li a {
+    text-decoration: none;
+    color: #FF5722;
+    font-size: 14px;
+}
+
+.category:hover .subcategories {
+    display: block;
+}
+
+/* Στυλ για το hover των κατηγοριών */
+.category:hover a {
+    color: #FF5722;
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    color: #333;
+    width: auto;
+    gap: 15px;
+}
+
+.user-box p {
+    margin: 0;
+    color: #555;
+    white-space: nowrap; /* Διατήρηση σε μία γραμμή */
+}
+
+.user-box span {
+    font-weight: bold;
+    color: #FF5722;
+}
+
+.user-box a.btn, 
+.user-box .logout-btn {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    background: #FF5722;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-box a.btn:hover, 
+.user-box .logout-btn:hover {
+    background: #E53935;
+}
+/* Στυλ για τις κατηγορίες */
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 στήλες */
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.category {
+    list-style: none;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.category-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.category a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Στυλ για τις υποκατηγορίες */
+.subcategories {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.subcategories li {
+    margin-top: 5px;
+}
+
+.subcategories li a {
+    text-decoration: none;
+    color: #FF5722;
+    font-size: 14px;
+}
+
+.category:hover .subcategories {
+    display: block;
+}
+
+/* Στυλ για το hover των κατηγοριών */
+.category:hover a {
+    color: #FF5722;
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    color: #333;
+    width: auto;
+    gap: 15px;
+}
+
+.user-box p {
+    margin: 0;
+    color: #555;
+    white-space: nowrap; /* Διατήρηση σε μία γραμμή */
+}
+
+.user-box span {
+    font-weight: bold;
+    color: #FF5722;
+}
+
+.user-box a.btn, 
+.user-box .logout-btn {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    background: #FF5722;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-box a.btn:hover, 
+.user-box .logout-btn:hover {
+    background: #E53935;
+}
+/* Στυλ για τις κατηγορίες */
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 στήλες */
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.category {
+    list-style: none;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.category-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.category a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Στυλ για τις υποκατηγορίες */
+.subcategories {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.subcategories li {
+    margin-top: 5px;
+}
+
+.subcategories li a {
+    text-decoration: none;
+    color: #FF5722;
+    font-size: 14px;
+}
+
+.category:hover .subcategories {
+    display: block;
+}
+
+/* Στυλ για το hover των κατηγοριών */
+.category:hover a {
+    color: #FF5722;
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    color: #333;
+    width: auto;
+    gap: 15px;
+}
+
+.user-box p {
+    margin: 0;
+    color: #555;
+    white-space: nowrap; /* Διατήρηση σε μία γραμμή */
+}
+
+.user-box span {
+    font-weight: bold;
+    color: #FF5722;
+}
+
+.user-box a.btn, 
+.user-box .logout-btn {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    background: #FF5722;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-box a.btn:hover, 
+.user-box .logout-btn:hover {
+    background: #E53935;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input[type="text"] {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background-color: #ff5722; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-bar button i {
+    font-size: 18px;
+}
+
+.search-bar button:hover {
+    background-color: #e64a19; 
+}
+.search-container {
+    display: flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.search-button {
+    background-color: #ff6600; 
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button i {
+    margin-right: 5px;
+}
+
+.search-button:hover {
+    background-color: #e65500; 
+}
+
+/* CSS for search results*/
+.dropdown-results {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 500px; /* Μέγιστο ύψος */
+    overflow-y: auto; /* Προσθήκη scroll αν ξεπεραστεί το ύψος */
+    width: 700px; /* Πλάτος */
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.dropdown-results ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block; /* Για κάθετη διάταξη */
+}
+
+.dropdown-results li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    text-align: left; 
+}
+
+.dropdown-results li:hover {
+    background-color: #f7f7f7; 
+}
+
+.dropdown-results li a {
+    text-decoration: none; 
+    color: #FF5722; 
+    font-size: 18px;
+    font-weight:bold;
+    transition: color 0.3s ease;
+}
+
+.dropdown-results li a:hover {
+    color: #E64A19;
+}
+
+.dropdown-results li img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.dropdown-results li:hover {
+    background-color: #f0f0f0;
+}
+
+.product-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.product-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.product-info h4 {
+    margin: 10px 0;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 1366px) {
+    .category {
+        font-size:16px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}

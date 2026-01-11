@@ -1,0 +1,411 @@
+/* CSS for Cart Modal in header.php */
+.cart-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+}
+
+.cart-dropdown {
+    display: none; /* Αρχικά κρυφό */
+    position: absolute;
+    top: 100%; /* Κάτω από το εικονίδιο */
+    right: 0;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+    z-index: 1000;
+}
+.cart-dropdown.active {
+    display: block; /* Εμφανίζεται όταν έχει την κλάση active */
+}
+.cart-wrapper:hover .cart-dropdown {
+    display: block; /* Εμφάνιση όταν κάνεις hover */
+}
+.cart-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #FF5722; 
+}
+
+.cart-buttons {
+    display: flex;
+    justify-content: space-between; /* Χώρος ανάμεσα στα κουμπιά */
+    padding: 10px 0 0;
+}
+
+.cart-buttons .btn {
+    display: inline-block;
+    background-color: #FF5722; /* Χρώμα πορτοκαλί */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-buttons .btn:hover {
+    background-color: #e65500; /* Σκούρο πορτοκαλί στο hover */
+}
+.cart-dropdown-content {
+    text-align: center;
+}
+
+.cart-dropdown-content button {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cart-dropdown-content button:hover {
+    background-color: #e55a00;
+}
+.cart-item {
+    border-bottom: 1px solid #ddd; /* Απαλή γκρι γραμμή */
+    padding-bottom: 10px; /* Κενό κάτω από τη γραμμή */
+    margin-bottom: 10px; /* Κενό κάτω από το αντικείμενο */
+}
+
+.cart-item:last-child {
+    border-bottom: none; /* Αφαίρεση γραμμής από το τελευταίο αντικείμενο */
+}
+
+.cart-dropdown .cart-items {
+    max-height: 200px; /* Όριο ύψους της λίστας */
+    overflow-y: auto; /* Ενεργοποίηση scroll */
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Διαχωρισμός από τα κουμπιά */
+    margin-bottom: 10px;
+}
+.cart-dropdown .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-dropdown .cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.cart-dropdown .cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-dropdown .cart-item-details h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.cart-dropdown .cart-item-details p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #555;
+}
+
+.cart-dropdown .cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.cart-dropdown .cart-buttons a {
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #FF5722;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    flex-grow: 1;
+    margin: 0 5px;
+}
+
+.cart-dropdown .cart-buttons a:hover {
+    background-color: #E64A19;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-container button {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    border: none;
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.quantity-container input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 25px;
+    font-size: 14px;
+}
+
+.quantity-container button:hover {
+    background-color: #E64A19;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-btn:hover {
+    background-color: #e64a19;
+}
+
+.remove-btn {
+    background-color: #ff3333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.remove-btn:hover {
+    background-color: #cc0000;
+}
+.cart-footer {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.proceed-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.proceed-btn:hover {
+    background-color: #E64A19;
+}
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.cart-items {
+    max-height: 400px; 
+    overflow-y: auto; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-image img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.item-details h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.item-details p {
+    font-size: 14px;
+    color: #666;
+    margin: 3px 0;
+}
+
+.item-actions a {
+    background-color: #FF5722;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.item-actions a:hover {
+    background-color: #E64A19;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #FF5722;
+}
+
+.back-to-products {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.back-to-products:hover {
+    text-decoration: underline;
+}
+.back-to-products {
+    background-color: #FF5722;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.warning-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.warning-message.show {
+    opacity: 1;
+}
+
+/* Γενικές ρυθμίσεις για τα κουπόνια */
+.cart-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* Στυλ για τα κουμπιά */
+.btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: auto;
+}
+
+.btn:hover {
+    background-color: #E64A19;
+}
+
+/* Στυλ για το modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#discount-amount, #final-price {
+    font-weight: bold;
+    color: green;
+    display: none;
+}
+
