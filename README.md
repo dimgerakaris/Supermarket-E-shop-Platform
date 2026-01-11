@@ -1,7 +1,5 @@
-# Supermarket-E-shop-Platform
-A Full-Stack Supermarket E-shop platform developed for my thesis. Built with HTML and CSS for a responsive design, PHP and MySQL for the backend, and AJAX, JSON, and JavaScript for dynamic content updates and a seamless user experience.
-
 # Supermarket E-shop Platform 🛒
+A Full-Stack Supermarket E-shop platform developed for my thesis. Built with HTML and CSS for a responsive design, PHP and MySQL for the backend, and AJAX, JSON, and JavaScript for dynamic content updates and a seamless user experience.
 
 ## 📌 Overview
 This is a full-stack e-commerce application developed as my Bachelor's Thesis. The project simulates a real-world supermarket experience, focusing on scalability, clean code, and intuitive user experience.
